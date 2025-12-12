@@ -4284,27 +4284,61 @@ footer {
         font-size: 0.9rem;
     }
 
-    /* Careers Modal - Better Stacking */
+    /* Careers Modal - Mobile Stacking */
     .apply-modal-content {
-        height: 95vh;
-        width: 95vw;
+        display: flex !important;
+        flex-direction: column !important;
+        height: 92vh !important;
+        width: 95vw !important;
+        max-width: 95vw !important;
         border-radius: 12px;
+        overflow: hidden;
+        /* Contain children */
+        grid-template-columns: 1fr !important;
+        /* Reset grid if active */
     }
 
     .modal-left-col {
-        max-height: 30vh;
-        padding: 1.5rem;
+        width: 100% !important;
+        height: auto !important;
+        max-height: 20vh !important;
+        /* Smaller header area */
+        padding: 1rem 1.5rem !important;
+        border-right: none !important;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        border-right: none;
+        overflow-y: auto;
+        /* Allow small scroll if needed */
+        flex-shrink: 0;
+    }
+
+    .modal-job-title {
+        font-size: 1.4rem !important;
+        margin-bottom: 0.2rem !important;
+    }
+
+    .modal-job-subtitle {
+        margin-bottom: 0 !important;
+    }
+
+    /* Hide extra details in header to save space */
+    .req-list,
+    .req-title {
+        display: none !important;
     }
 
     .modal-right-col {
-        padding: 1.5rem;
+        width: 100% !important;
+        padding: 1.5rem !important;
+        overflow-y: auto !important;
+        /* Scrollable form */
+        flex-grow: 1;
+        /* Take remaining space */
+        -webkit-overflow-scrolling: touch;
     }
 
     .apply-form {
-        padding-bottom: 3rem;
-        /* Space for scrolling */
+        padding-bottom: 5rem;
+        /* Space for keyboard/scrolling */
     }
 
     .modal-close-abs {
