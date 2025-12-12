@@ -4371,19 +4371,20 @@ footer {
         left: 0;
         width: 100vw !important;
         height: 100vh !important;
-        background: radial-gradient(circle at top right, rgba(30, 41, 59, 0.98), rgba(2, 6, 23, 0.99)) !important;
-        backdrop-filter: blur(25px);
+        background: rgba(15, 23, 42, 0.98) !important;
+        /* Solid sleek dark blue-black */
+        backdrop-filter: blur(20px);
         transform: translateY(-100%);
-        /* Slide down from top */
-        transition: transform 0.6s cubic-bezier(0.86, 0, 0.07, 1);
-        /* Custom easing */
+        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         display: flex !important;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 2rem !important;
+        padding: 4rem 2rem 2rem !important;
+        /* Top padding for breathing room */
         margin: 0 !important;
-        z-index: 9998;
+        z-index: 9990;
+        /* High but below toggle */
         opacity: 0;
         visibility: hidden;
     }
@@ -4399,7 +4400,9 @@ footer {
         flex-direction: column;
         width: 100%;
         text-align: center;
-        gap: 1.5rem;
+        gap: 2rem;
+        list-style: none;
+        /* Just in case */
     }
 
     .nav-links li {
@@ -4440,74 +4443,96 @@ footer {
         transition-delay: 0.6s;
     }
 
-    /* Massive Typography */
+    /* Premium Typography - Solid White */
     .nav-links li a {
         font-family: 'Outfit', sans-serif;
-        font-size: 2.5rem;
-        /* Huge font */
-        font-weight: 800;
-        color: transparent;
-        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
-        text-transform: uppercase;
-        letter-spacing: 2px;
+        font-size: 2rem;
+        /* Large but safe */
+        font-weight: 700;
+        color: #ffffff !important;
+        /* Solid White */
+        text-transform: capitalize;
+        /* More elegant than uppercase */
+        letter-spacing: 0.5px;
         display: block;
         padding: 0.5rem;
         transition: all 0.3s ease;
+        text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        /* Subtle depth */
     }
 
     .nav-links li a:hover,
     .nav-links li a.active {
-        color: #fff;
-        -webkit-text-stroke: 0px;
-        text-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+        color: var(--accent) !important;
         transform: scale(1.05);
+        text-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
     }
 
-    /* Dropdown Styling in Mobile */
-    .mega-dropdown .dropdown-menu {
-        position: static !important;
-        background: rgba(255, 255, 255, 0.03) !important;
-        box-shadow: none !important;
-        border: 1px solid rgba(255, 255, 255, 0.1) !important;
-        border-radius: 12px;
-        display: none;
-        padding: 1rem;
-        margin-top: 1rem;
-        text-align: left;
-    }
+    font-size: 2.5rem;
+    /* Huge font */
+    font-weight: 800;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+}
 
-    .mega-dropdown.active .dropdown-menu {
-        display: block;
-        animation: fadeIn 0.4s ease;
-    }
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: #fff;
+    -webkit-text-stroke: 0px;
+    text-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+    transform: scale(1.05);
+}
 
-    .dropdown-col h4 {
-        font-size: 1rem;
-        color: var(--accent);
-        margin: 1rem 0 0.5rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
+/* Dropdown Styling in Mobile */
+.mega-dropdown .dropdown-menu {
+    position: static !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    box-shadow: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 12px;
+    display: none;
+    padding: 1rem;
+    margin-top: 1rem;
+    text-align: left;
+}
 
-    .dropdown-col ul li a {
-        font-size: 1rem !important;
-        /* Smaller for sub-items */
-        -webkit-text-stroke: 0px !important;
-        color: #94a3b8 !important;
-        font-weight: 400;
-        text-transform: none;
-        letter-spacing: normal;
-        padding: 0.3rem 0;
-    }
+.mega-dropdown.active .dropdown-menu {
+    display: block;
+    animation: fadeIn 0.4s ease;
+}
 
-    /* Bottom Decoration */
-    .nav-menu::after {
-        content: "Hiprowes.";
-        position: absolute;
-        bottom: 2rem;
-        font-size: 1rem;
-        color: rgba(255, 255, 255, 0.2);
-        letter-spacing: 5px;
-        text-transform: uppercase;
-    }
+.dropdown-col h4 {
+    font-size: 1rem;
+    color: var(--accent);
+    margin: 1rem 0 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.dropdown-col ul li a {
+    font-size: 1rem !important;
+    /* Smaller for sub-items */
+    -webkit-text-stroke: 0px !important;
+    color: #94a3b8 !important;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: normal;
+    padding: 0.3rem 0;
+}
+
+/* Bottom Decoration */
+.nav-menu::after {
+    content: "Hiprowes.";
+    position: absolute;
+    bottom: 2rem;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.2);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
 }
