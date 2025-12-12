@@ -3,11 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu Toggle
     const menuToggle = document.querySelector('.menu-toggle');
     const navContainer = document.querySelector('.nav-container');
+    const navMenu = document.querySelector('.nav-menu'); // Target the menu directly
     const body = document.body;
 
     if (menuToggle) {
         menuToggle.addEventListener('click', () => {
             navContainer.classList.toggle('active');
+            navMenu.classList.toggle('active'); // Toggle class on menu for CSS transform
             const icon = menuToggle.querySelector('i');
 
             if (navContainer.classList.contains('active')) {
