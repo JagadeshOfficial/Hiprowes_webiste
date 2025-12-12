@@ -4431,7 +4431,8 @@ footer {
         flex-direction: column;
         width: 100%;
         text-align: center;
-        gap: 2rem;
+        gap: 1.25rem;
+        /* Reduced gap significantly */
         list-style: none;
         /* Just in case */
     }
@@ -4447,6 +4448,24 @@ footer {
     .nav-menu.active .nav-links li {
         opacity: 1;
         transform: translateY(0);
+    }
+
+    /* Premium Typography - Solid White */
+    .nav-links li a {
+        font-family: 'Outfit', sans-serif;
+        font-size: 1.75rem;
+        /* Reduced from 2rem to fit more items */
+        font-weight: 700;
+        color: #ffffff !important;
+        /* Solid White */
+        text-transform: capitalize;
+        letter-spacing: 0.5px;
+        display: block;
+        padding: 0.25rem;
+        /* Reduced padding */
+        transition: all 0.3s ease;
+        text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        /* Subtle depth */
     }
 
     /* Delay each item */
@@ -4474,101 +4493,87 @@ footer {
         transition-delay: 0.6s;
     }
 
-    /* Premium Typography - Solid White */
-    .nav-links li a {
-        font-family: 'Outfit', sans-serif;
-        font-size: 2rem;
-        /* Large but safe */
-        font-weight: 700;
-        color: #ffffff !important;
-        /* Solid White */
-        text-transform: capitalize;
-        /* More elegant than uppercase */
-        letter-spacing: 0.5px;
-        display: block;
-        padding: 0.5rem;
-        transition: all 0.3s ease;
-        text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        /* Subtle depth */
-    }
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* Subtle depth */
+}
 
-    /* Hover Effect */
-    .nav-links li a:hover,
-    .nav-links li a.active {
-        color: var(--accent) !important;
-        transform: scale(1.05);
-        text-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
-    }
+/* Hover Effect */
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: var(--accent) !important;
+    transform: scale(1.05);
+    text-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+}
 
-    /* --- MOBILE ACCORDION STYLES --- */
-    /* Reset Dropdowns for Accordion */
-    .mega-dropdown .dropdown-menu {
-        position: relative !important;
-        /* Stack vertically */
-        top: 0 !important;
-        left: 0 !important;
-        width: 100% !important;
-        background: rgba(255, 255, 255, 0.03) !important;
-        border: none !important;
-        box-shadow: none !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.5s ease-out, opacity 0.5s ease;
-        opacity: 0;
-        visibility: hidden;
-        display: block !important;
-        /* Always block, toggle via height */
-    }
+/* --- MOBILE ACCORDION STYLES --- */
+/* Reset Dropdowns for Accordion */
+.mega-dropdown .dropdown-menu {
+    position: relative !important;
+    /* Stack vertically */
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+    display: block !important;
+    /* Always block, toggle via height */
+}
 
-    /* Active State (Open Accordion) */
-    .nav-item.dropdown.active .dropdown-menu {
-        max-height: 1000px;
-        /* Arbitrary large height */
-        opacity: 1;
-        visibility: visible;
-        padding: 1rem !important;
-        margin-top: 1rem !important;
-        border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    }
+/* Active State (Open Accordion) */
+.nav-item.dropdown.active .dropdown-menu {
+    max-height: 1000px;
+    /* Arbitrary large height */
+    opacity: 1;
+    visibility: visible;
+    padding: 1rem !important;
+    margin-top: 1rem !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
 
-    /* Rotate Icon */
-    .nav-item.dropdown.active .toggle-icon {
-        transform: rotate(180deg);
-        color: var(--accent);
-    }
+/* Rotate Icon */
+.nav-item.dropdown.active .toggle-icon {
+    transform: rotate(180deg);
+    color: var(--accent);
+}
 
-    /* Sub-items Styling */
-    .mega-column {
-        margin-bottom: 1.5rem;
-    }
+/* Sub-items Styling */
+.mega-column {
+    margin-bottom: 1.5rem;
+}
 
-    .mega-title {
-        font-size: 0.9rem;
-        color: var(--accent);
-        margin-bottom: 0.5rem;
-        padding-left: 0.5rem;
-        border-left: 2px solid var(--accent);
-    }
+.mega-title {
+    font-size: 0.9rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    border-left: 2px solid var(--accent);
+}
 
-    .dropdown-item {
-        padding: 0.5rem 1rem !important;
-        font-size: 1rem !important;
-        color: #94a3b8 !important;
-        -webkit-text-stroke: 0 !important;
-        /* Ensure readable */
-        text-shadow: none !important;
-    }
+.dropdown-item {
+    padding: 0.5rem 1rem !important;
+    font-size: 1rem !important;
+    color: #94a3b8 !important;
+    -webkit-text-stroke: 0 !important;
+    /* Ensure readable */
+    text-shadow: none !important;
+}
 
-    /* Bottom Decoration */
-    .nav-menu::after {
-        content: "Hiprowes.";
-        position: absolute;
-        bottom: 2rem;
-        font-size: 1rem;
-        color: rgba(255, 255, 255, 0.2);
-        letter-spacing: 5px;
-        text-transform: uppercase;
-    }
+/* Bottom Decoration */
+.nav-menu::after {
+    content: "Hiprowes.";
+    position: absolute;
+    bottom: 2rem;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.2);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
 }
