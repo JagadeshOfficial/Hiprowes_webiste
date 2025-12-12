@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industries | Hiprowes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo">Hiprowes<span class="logo-dot">.</span></a>
+            <div class="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav class="nav-container">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="about.html" class="nav-link">About Us <i
+                                class="fas fa-chevron-down toggle-icon"></i></a>
+                        <div class="dropdown-menu fade-in">
+                            <a href="about.html#who-we-are" class="dropdown-item">Who We Are</a>
+                            <a href="about.html#vision" class="dropdown-item">Vision & Mission</a>
+                            <a href="about.html#leadership" class="dropdown-item">Leadership Team</a>
+                            <a href="about.html#why-us" class="dropdown-item">Why Choose Us</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown mega-dropdown">
+                        <a href="#" class="nav-link">Services <i class="fas fa-chevron-down toggle-icon"></i></a>
+                        <div class="dropdown-menu mega-menu fade-in">
+                            <div class="mega-column">
+                                <h4 class="mega-title">Core IT</h4>
+                                <a href="service-software.html" class="dropdown-item">Software Development</a>
+                                <a href="service-web.html" class="dropdown-item">Web Design & Development</a>
+                                <a href="service-mobile.html" class="dropdown-item">Mobile App Development</a>
+                                <a href="service-cloud.html" class="dropdown-item">Cloud & DevOps</a>
+                                <a href="service-ui-ux.html" class="dropdown-item">UI/UX Design</a>
+                                <a href="service-consulting.html" class="dropdown-item">IT Consulting</a>
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-title">Enterprise Solutions</h4>
+                                <a href="service-oracle.html" class="dropdown-item">Oracle ERP Services</a>
+                                <a href="service-epm.html" class="dropdown-item">EPM Services</a>
+                                <a href="service-sap.html" class="dropdown-item">SAP Services</a>
+                                <a href="service-salesforce.html" class="dropdown-item">Salesforce Services</a>
+                            </div>
+                            <div class="mega-column promo-column">
+                                <div class="nav-promo-card">
+                                    <i class="fas fa-rocket"></i>
+                                    <h5>Ready to Scale?</h5>
+                                    <p>Discover how our solutions drive growth.</p>
+                                    <a href="contact.html" class="btn-text">Get Started &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown active">
+                        <a href="#" class="nav-link" onclick="return false;">Industries <i
+                                class="fas fa-chevron-down toggle-icon"></i></a>
+                        <div class="dropdown-menu fade-in">
+                            <a href="industry-healthcare.html" class="dropdown-item"><i class="fas fa-heartbeat"></i>
+                                Healthcare</a>
+                            <a href="industry-finance.html" class="dropdown-item"><i class="fas fa-chart-line"></i>
+                                Finance</a>
+                            <a href="industry-ecommerce.html" class="dropdown-item"><i class="fas fa-shopping-cart"></i>
+                                E-Commerce</a>
+                            <a href="industry-logistics.html" class="dropdown-item"><i class="fas fa-truck-moving"></i>
+                                Logistics</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li class="nav-item"><a href="careers.html" class="nav-link">Careers</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="contact.html" class="btn btn-primary btn-sm">Contact Us</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Industries We Serve</h1>
+            <p style="color: var(--text-muted);">Tailored Solutions for Specialized Markets</p>
+        </div>
+    </div>
+
+    <section>
+        <div class="container">
+            <div class="grid-3">
+                <!-- Healthcare -->
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-heartbeat"></i></div>
+                    <h3>Healthcare</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                        Digital transformation for hospitals, clinics, and health-tech startups. compliant with HIPAA
+                        and GDPR.
+                    </p>
+                    <a href="industry-healthcare.html" class="btn btn-outline"
+                        style="font-size: 0.8rem; padding: 0.5rem 1rem;">Explore Healthcare &rarr;</a>
+                </div>
+
+                <!-- E-Commerce -->
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-shopping-cart"></i></div>
+                    <h3>E-Commerce</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                        Scalable online store architectures, headless commerce, and AI-driven personalization engines.
+                    </p>
+                    <a href="industry-ecommerce.html" class="btn btn-outline"
+                        style="font-size: 0.8rem; padding: 0.5rem 1rem;">Explore Retail &rarr;</a>
+                </div>
+
+                <!-- Finance -->
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-chart-pie"></i></div>
+                    <h3>Finance & Fintech</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                        Secure banking applications, blockchain integration, and high-frequency trading platforms.
+                    </p>
+                    <a href="industry-finance.html" class="btn btn-outline"
+                        style="font-size: 0.8rem; padding: 0.5rem 1rem;">Explore Fintech &rarr;</a>
+                </div>
+
+                <!-- Logistics -->
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-truck"></i></div>
+                    <h3>Logistics</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                        IoT-enabled fleet management, real-time tracking, and automated warehouse solutions.
+                    </p>
+                    <a href="industry-logistics.html" class="btn btn-outline"
+                        style="font-size: 0.8rem; padding: 0.5rem 1rem;">Explore Logistics &rarr;</a>
+                </div>
+
+                <!-- Real Estate -->
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-city"></i></div>
+                    <h3>Real Estate</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                        Virtual tours, property management CRMs, and smart building integration.
+                    </p>
+                    <a href="contact.html" class="btn btn-outline"
+                        style="font-size: 0.8rem; padding: 0.5rem 1rem;">Contact Us &rarr;</a>
+                </div>
+
+                <!-- Education -->
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Education</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                        LMS (Learning Management Systems), virtual classrooms, and remote exam proctoring.
+                    </p>
+                    <a href="contact.html" class="btn btn-outline"
+                        style="font-size: 0.8rem; padding: 0.5rem 1rem;">Contact Us &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Hiprowes<span>.</span></h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1rem;">Empowering businesses with cutting-edge
+                        technology and enterprise solutions.</p>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="#" style="color: white; font-size: 1.2rem;"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" style="color: white; font-size: 1.2rem;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: white; font-size: 1.2rem;"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Core IT</h3>
+                    <ul>
+                        <li><a href="service-software.html">Software Dev</a></li>
+                        <li><a href="service-web.html">Web Development</a></li>
+                        <li><a href="service-mobile.html">Mobile Apps</a></li>
+                        <li><a href="service-cloud.html">Cloud & DevOps</a></li>
+                        <li><a href="service-ui-ux.html">UI/UX Design</a></li>
+                        <li><a href="service-consulting.html">IT Consulting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Enterprise</h3>
+                    <ul>
+                        <li><a href="service-oracle.html">Oracle ERP</a></li>
+                        <li><a href="service-epm.html">EPM Services</a></li>
+                        <li><a href="service-sap.html">SAP Solutions</a></li>
+                        <li><a href="service-salesforce.html">Salesforce</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><a href="mailto:info@hiprowes.com">info@hiprowes.com</a></li>
+                        <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                        <li>123 Tech Park, Innovation City</li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                style="text-align: center; color: var(--text-primary-light); border-top: 1px solid rgba(255,255,255,0.05); padding-top: 2rem;">
+                <p style="color: var(--text-muted); font-size: 0.9rem;">&copy; 2025 Hiprowes. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

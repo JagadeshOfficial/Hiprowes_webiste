@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retail & E-Commerce Solutions | Hiprowes</title>
+    <meta name="description"
+        content="Scalable E-Commerce platforms, omnichannel retail solutions, and AI-driven personalization engines.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.nav-link');
+            const contents = document.querySelectorAll('.tab-content');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(t => t.classList.remove('active'));
+                    contents.forEach(c => c.classList.remove('active'));
+                    tab.classList.add('active');
+                    const target = document.getElementById(tab.dataset.target);
+                    if (target) target.classList.add('active');
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <!-- Header (Same as others) -->
+    <header class="main-header">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo">Hiprowes<span class="logo-dot">.</span></a>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+            <nav class="nav-container">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item dropdown"><a href="about.html" class="nav-link">About Us <i
+                                class="fas fa-chevron-down toggle-icon"></i></a>
+                        <div class="dropdown-menu fade-in">
+                            <a href="about.html#who-we-are" class="dropdown-item">Who We Are</a>
+                            <a href="about.html#vision" class="dropdown-item">Vision & Mission</a>
+                            <a href="about.html#leadership" class="dropdown-item">Leadership Team</a>
+                            <a href="about.html#why-us" class="dropdown-item">Why Choose Us</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown mega-dropdown"><a href="#" class="nav-link">Services <i
+                                class="fas fa-chevron-down toggle-icon"></i></a>
+                        <div class="dropdown-menu mega-menu fade-in">
+                            <div class="mega-column">
+                                <h4 class="mega-title">Core IT</h4>
+                                <a href="service-software.html" class="dropdown-item">Software Development</a>
+                                <a href="service-web.html" class="dropdown-item">Web Design & Development</a>
+                                <a href="service-mobile.html" class="dropdown-item">Mobile App Development</a>
+                                <a href="service-cloud.html" class="dropdown-item">Cloud & DevOps</a>
+                                <a href="service-ui-ux.html" class="dropdown-item">UI/UX Design</a>
+                                <a href="service-consulting.html" class="dropdown-item">IT Consulting</a>
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-title">Enterprise Solutions</h4>
+                                <a href="service-oracle.html" class="dropdown-item">Oracle ERP Services</a>
+                                <a href="service-epm.html" class="dropdown-item">EPM Services</a>
+                                <a href="service-sap.html" class="dropdown-item">SAP Services</a>
+                                <a href="service-salesforce.html" class="dropdown-item">Salesforce Services</a>
+                            </div>
+                            <div class="mega-column promo-column">
+                                <div class="nav-promo-card"><i class="fas fa-rocket"></i>
+                                    <h5>Ready to Scale?</h5>
+                                    <p>Discover how our solutions drive growth.</p><a href="contact.html"
+                                        class="btn-text">Get Started &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown active">
+                        <a href="#" class="nav-link" onclick="return false;">Industries <i
+                                class="fas fa-chevron-down toggle-icon"></i></a>
+                        <div class="dropdown-menu fade-in">
+                            <a href="industry-healthcare.html" class="dropdown-item"><i class="fas fa-heartbeat"></i>
+                                Healthcare</a>
+                            <a href="industry-finance.html" class="dropdown-item"><i class="fas fa-chart-line"></i>
+                                Finance</a>
+                            <a href="industry-ecommerce.html" class="dropdown-item"><i class="fas fa-shopping-cart"></i>
+                                E-Commerce</a>
+                            <a href="industry-logistics.html" class="dropdown-item"><i class="fas fa-truck-moving"></i>
+                                Logistics</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li class="nav-item"><a href="careers.html" class="nav-link">Careers</a></li>
+                </ul>
+                <div class="nav-actions"><a href="contact.html" class="btn btn-primary btn-sm">Contact Us</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Industry Hero -->
+    <section class="industry-hero">
+        <div class="industry-hero-bg"
+            style="background-image: url('https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=2070&auto=format&fit=crop');">
+        </div>
+        <div class="service-hero-content">
+            <span class="badge">Industry Focus: Retail</span>
+            <h1>Commerce Without<br>Boundaries</h1>
+            <p>Create unforgettable shopping experiences that drive conversion and customer loyalty across every
+                channel.</p>
+            <div class="service-hero-cta">
+                <a href="#solutions" class="btn btn-primary">Our Solutions</a>
+                <a href="contact.html" class="btn btn-outline">Consult an Expert</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Compliance Strip -->
+    <div class="compliance-strip">
+        <div class="container">
+            <div class="compliance-grid">
+                <div class="compliance-item"><i class="fas fa-credit-card" style="color: var(--accent);"></i> Secure
+                    Payments</div>
+                <div class="compliance-item"><i class="fas fa-globe" style="color: var(--accent);"></i> Cross-Border
+                    Ready</div>
+                <div class="compliance-item"><i class="fas fa-stopwatch" style="color: var(--accent);"></i> 99.99%
+                    Uptime</div>
+                <div class="compliance-item"><i class="fas fa-mobile-alt" style="color: var(--accent);"></i> Mobile
+                    First</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Challenges Grid -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="section-subtitle">The Landscape</span>
+                <h2 class="section-title">Retail Challenges We Solve</h2>
+            </div>
+            <div class="grid-3">
+                <div class="challenge-card">
+                    <span class="challenge-number">01</span>
+                    <h3>Cart Abandonment</h3>
+                    <p>Friction in the checkout process causing lost sales. We optimize flows for maximum conversion.
+                    </p>
+                </div>
+                <div class="challenge-card">
+                    <span class="challenge-number">02</span>
+                    <h3>Omnichannel Sync</h3>
+                    <p>Disconnect between online stock and physical stores leading to customer frustration.</p>
+                </div>
+                <div class="challenge-card">
+                    <span class="challenge-number">03</span>
+                    <h3>Personalization</h3>
+                    <p>Generic storefronts fail to engage. We implement AI to show users exactly what they want.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Tabs -->
+    <section id="solutions" class="section-padding bg-darker">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="section-subtitle">Our Expertise</span>
+                <h2 class="section-title">E-Commerce Solutions</h2>
+            </div>
+
+            <div class="solutions-tabs-container">
+                <div class="nav-pills">
+                    <button class="nav-link active" data-target="tab-platform">Custom Platforms</button>
+                    <button class="nav-link" data-target="tab-omni">Omnichannel</button>
+                    <button class="nav-link" data-target="tab-ai">AI Shopping</button>
+                </div>
+
+                <div id="tab-platform" class="tab-content active">
+                    <div class="solution-content-grid">
+                        <div class="solution-text">
+                            <h3>Scalable E-Commerce Platforms</h3>
+                            <p class="mb-4">From Magento to Shopify Plus or fully custom builds, we engineer stores that
+                                handle millions in traffic.</p>
+                            <ul class="solution-list">
+                                <li><i class="fas fa-check-circle"></i> Headless Commerce Architecture</li>
+                                <li><i class="fas fa-check-circle"></i> Custom Checkout Flows</li>
+                                <li><i class="fas fa-check-circle"></i> Integrated Payment Gateways</li>
+                                <li><i class="fas fa-check-circle"></i> SEO Optimized Structure</li>
+                            </ul>
+                            <a href="contact.html" class="btn-text mt-3">Build Your Store &rarr;</a>
+                        </div>
+                        <div class="solution-image">
+                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                alt="E-Commerce Platform">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tab-omni" class="tab-content">
+                    <div class="solution-content-grid">
+                        <div class="solution-text">
+                            <h3>Omnichannel Retail</h3>
+                            <p class="mb-4">Unify your online and offline worlds. Buy online, pick up in-store (BOPIS),
+                                and endless aisle solutions.</p>
+                            <ul class="solution-list">
+                                <li><i class="fas fa-check-circle"></i> Real-time Inventory Sync</li>
+                                <li><i class="fas fa-check-circle"></i> POS Integration</li>
+                                <li><i class="fas fa-check-circle"></i> Unified Customer Profiles</li>
+                                <li><i class="fas fa-check-circle"></i> Smart Loyalty Programs</li>
+                            </ul>
+                        </div>
+                        <div class="solution-image">
+                            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                alt="Omnichannel">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tab-ai" class="tab-content">
+                    <div class="solution-content-grid">
+                        <div class="solution-text">
+                            <h3>AI-Driven Personalization</h3>
+                            <p class="mb-4">Increase average order value (AOV) by verifying product recommendations and
+                                personalized search results.</p>
+                            <ul class="solution-list">
+                                <li><i class="fas fa-check-circle"></i> Dynamic Product Recommendations</li>
+                                <li><i class="fas fa-check-circle"></i> Intelligent Site Search</li>
+                                <li><i class="fas fa-check-circle"></i> Behavioral Retargeting</li>
+                                <li><i class="fas fa-check-circle"></i> Automated Marketing Flows</li>
+                            </ul>
+                        </div>
+                        <div class="solution-image">
+                            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                alt="AI Retail">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Story -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="success-story-card">
+                <i class="fas fa-quote-left quote-icon"></i>
+                <div class="story-content">
+                    <span class="section-subtitle">Success Story</span>
+                    <h2 class="mb-4">Scaling a Global Fashion Brand</h2>
+                    <p class="lead">"We needed a site that could handle Black Friday traffic without a hiccup. Hiprowes
+                        delivered a headless solution that doubled our site speed and increased mobile conversions by
+                        40%."</p>
+                    <div class="story-stat">200%</div>
+                    <p>Growth in Online Sales</p>
+                    <div class="mt-4">
+                        <strong>Elena Rodriguez</strong><br>
+                        <span class="text-muted">Head of Digital, Vogue Mode</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section service-cta">
+        <div class="container">
+            <div class="cta-content text-center">
+                <h2>Ready to Sell More?</h2>
+                <p>Equip your business with the tools to dominate the market.</p>
+                <div class="cta-actions justify-content-center">
+                    <a href="contact.html" class="btn btn-primary">Start Selling</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Hiprowes<span>.</span></h3>
+                    <p style="color:var(--text-muted);margin-bottom:1rem">Empowering businesses with cutting-edge
+                        technology and enterprise solutions.</p>
+                    <div style="display:flex;gap:1rem"><a href="#" style="color:white;font-size:1.2rem"><i
+                                class="fab fa-linkedin"></i></a><a href="#" style="color:white;font-size:1.2rem"><i
+                                class="fab fa-twitter"></i></a><a href="#" style="color:white;font-size:1.2rem"><i
+                                class="fab fa-instagram"></i></a></div>
+                </div>
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Core IT</h3>
+                    <ul>
+                        <li><a href="service-software.html">Software Dev</a></li>
+                        <li><a href="service-web.html">Web Development</a></li>
+                        <li><a href="service-mobile.html">Mobile Apps</a></li>
+                        <li><a href="service-cloud.html">Cloud & DevOps</a></li>
+                        <li><a href="service-ui-ux.html">UI/UX Design</a></li>
+                        <li><a href="service-consulting.html">IT Consulting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Enterprise</h3>
+                    <ul>
+                        <li><a href="service-oracle.html">Oracle ERP</a></li>
+                        <li><a href="service-epm.html">EPM Services</a></li>
+                        <li><a href="service-sap.html">SAP Solutions</a></li>
+                        <li><a href="service-salesforce.html">Salesforce</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><a href="mailto:info@hiprowes.com">info@hiprowes.com</a></li>
+                        <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                        <li>123 Tech Park, Innovation City</li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                style="text-align:center;color:var(--text-primary-light);border-top:1px solid rgba(255,255,255,0.05);padding-top:2rem">
+                <p style="color:var(--text-muted);font-size:0.9rem">&copy; 2025 Hiprowes. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

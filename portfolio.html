@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Hiprowes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo">Hiprowes<span class="logo-dot">.</span></a>
+
+            <div class="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <nav class="nav-container">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a href="about.html" class="nav-link">About Us <i
+                                class="fas fa-chevron-down toggle-icon"></i></a>
+                        <div class="dropdown-menu fade-in">
+                            <a href="about.html#who-we-are" class="dropdown-item">Who We Are</a>
+                            <a href="about.html#vision" class="dropdown-item">Vision & Mission</a>
+                            <a href="about.html#leadership" class="dropdown-item">Leadership Team</a>
+                            <a href="about.html#why-us" class="dropdown-item">Why Choose Us</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown mega-dropdown">
+                        <a href="#" class="nav-link">Services <i class="fas fa-chevron-down toggle-icon"></i></a>
+                        <div class="dropdown-menu mega-menu fade-in">
+                            <div class="mega-column">
+                                <h4 class="mega-title">Core IT</h4>
+                                <a href="service-software.html" class="dropdown-item">Software Development</a>
+                                <a href="service-web.html" class="dropdown-item">Web Design & Development</a>
+                                <a href="service-mobile.html" class="dropdown-item">Mobile App Development</a>
+                                <a href="service-cloud.html" class="dropdown-item">Cloud & DevOps</a>
+                                <a href="service-ui-ux.html" class="dropdown-item">UI/UX Design</a>
+                                <a href="service-consulting.html" class="dropdown-item">IT Consulting</a>
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-title">Enterprise Solutions</h4>
+                                <a href="service-oracle.html" class="dropdown-item">Oracle ERP Services</a>
+                                <a href="service-epm.html" class="dropdown-item">EPM Services</a>
+                                <a href="service-sap.html" class="dropdown-item">SAP Services</a>
+                                <a href="service-salesforce.html" class="dropdown-item">Salesforce Services</a>
+                            </div>
+                            <div class="mega-column promo-column">
+                                <div class="nav-promo-card">
+                                    <i class="fas fa-rocket"></i>
+                                    <h5>Ready to Scale?</h5>
+                                    <p>Discover how our solutions drive growth.</p>
+                                    <a href="contact.html" class="btn-text">Get Started &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link" onclick="return false;">Industries <i
+                                class="fas fa-chevron-down toggle-icon"></i></a>
+                        <div class="dropdown-menu fade-in">
+                            <a href="industry-healthcare.html" class="dropdown-item"><i class="fas fa-heartbeat"></i>
+                                Healthcare</a>
+                            <a href="industry-finance.html" class="dropdown-item"><i class="fas fa-chart-line"></i>
+                                Finance</a>
+                            <a href="industry-ecommerce.html" class="dropdown-item"><i class="fas fa-shopping-cart"></i>
+                                E-Commerce</a>
+                            <a href="industry-logistics.html" class="dropdown-item"><i class="fas fa-truck-moving"></i>
+                                Logistics</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item active"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li class="nav-item"><a href="careers.html" class="nav-link">Careers</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="contact.html" class="btn btn-primary btn-sm">Contact Us</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Portfolio Hero -->
+    <section class="portfolio-hero">
+        <div class="portfolio-hero-content">
+            <h1>We Build Success Stories</h1>
+            <p>From startups to Fortune 500s, we deliver digital products that drive real growth.</p>
+        </div>
+    </section>
+
+    <!-- Impact Stats -->
+    <div class="impact-section">
+        <div class="container">
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <h2 class="counter" data-target="500">500+</h2>
+                    <p>Projects Delivered</p>
+                </div>
+                <div class="impact-card">
+                    <h2 class="counter" data-target="98">98%</h2>
+                    <p>Client Retention</p>
+                </div>
+                <div class="impact-card">
+                    <h2 class="counter" data-target="150">150M</h2>
+                    <p>Users Impacted</p>
+                </div>
+                <div class="impact-card">
+                    <h2>24/7</h2>
+                    <p>Global Support</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Portfolio Grid -->
+    <section class="section-padding" id="work">
+        <div class="container">
+            <!-- Filters -->
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="web">Web & E-Commerce</button>
+                <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                <button class="filter-btn" data-filter="enterprise">Enterprise</button>
+                <button class="filter-btn" data-filter="ai">AI & Cloud</button>
+            </div>
+
+            <!-- Grid -->
+            <div class="project-grid">
+                <!-- Project 1 (Fixed Image) -->
+                <div class="project-card" data-category="web" data-title="Global Fashion Platform"
+                    data-desc="We completely reimagined the digital flagship for this global fashion retailer. By implementing headless commerce and AI-driven recommendations, we personalized the shopping experience for over 10 million unique visitors."
+                    data-client="VogueStyle Retail" data-year="2024"
+                    data-image="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&q=80&w=800">
+                    <div class="project-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&q=80&w=800"
+                            alt="E-Commerce Platform" class="project-image">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Retail / E-Commerce</span>
+                        <h3 class="project-title">Global Fashion Platform</h3>
+                        <p class="project-description">End-to-end redesign features AI recommendations and 3D virtual
+                            try-ons.</p>
+                        <div class="project-stats">
+                            <div class="p-stat">
+                                <h4>+40%</h4>
+                                <span>Conversion</span>
+                            </div>
+                            <div class="p-stat">
+                                <h4>2.5s</h4>
+                                <span>Load Time</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-category="mobile" data-title="NeoBank App"
+                    data-desc="A challenger bank built for the mobile-first generation. We designed a secure, frictionless onboarding process that takes less than 3 minutes, coupled with real-time spending analytics."
+                    data-client="NovaFin" data-year="2023"
+                    data-image="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800">
+                    <div class="project-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800"
+                            alt="Mobile Banking" class="project-image">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Fintech / Mobile</span>
+                        <h3 class="project-title">NeoBank App</h3>
+                        <p class="project-description">Secure mobile banking with real-time analytics and crypto tools.
+                        </p>
+                        <div class="project-stats">
+                            <div class="p-stat">
+                                <h4>1M+</h4>
+                                <span>Downloads</span>
+                            </div>
+                            <div class="p-stat">
+                                <h4>4.9</h4>
+                                <span>App Store</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-category="enterprise" data-title="Supply Chain ERP"
+                    data-desc="Custom-built ERP solution integrating IoT sensors from 5,000+ trucks. This system provides real-time visibility into inventory and shipping status, reducing loss and optimizing routes."
+                    data-client="LogiTrans Global" data-year="2024"
+                    data-image="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800">
+                    <div class="project-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
+                            alt="Dashboard" class="project-image">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Enterprise / SaaS</span>
+                        <h3 class="project-title">Supply Chain ERP</h3>
+                        <p class="project-description">Automating warehouse operations and fleet management via IoT.</p>
+                        <div class="project-stats">
+                            <div class="p-stat">
+                                <h4>-30%</h4>
+                                <span>OpEx</span>
+                            </div>
+                            <div class="p-stat">
+                                <h4>Real-time</h4>
+                                <span>Tracking</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 (AI) -->
+                <div class="project-card" data-category="ai" data-title="MediBot Assistant"
+                    data-desc="An advanced NLP-powered diagnostic assistant used by triage nurses. It can understand patient symptoms in natural language and suggest potential diagnoses with 95% accuracy."
+                    data-client="HealthFirst Partners" data-year="2023"
+                    data-image="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800">
+                    <div class="project-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800"
+                            alt="AI Chatbot" class="project-image">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">AI / Healthcare</span>
+                        <h3 class="project-title">MediBot Assistant</h3>
+                        <p class="project-description">HIPAA-compliant AI diagnostic assistant for triage and analysis.
+                        </p>
+                        <div class="project-stats">
+                            <div class="p-stat">
+                                <h4>95%</h4>
+                                <span>Accuracy</span>
+                            </div>
+                            <div class="p-stat">
+                                <h4>15min</h4>
+                                <span>Time Saved</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 (Web - Fixed Image) -->
+                <div class="project-card" data-category="web" data-title="TechCorp Rebrand"
+                    data-desc="We helped this legacy tech giant shed its old image. The new digital identity is bold, accessible, and fast, reflecting their shift towards modern cloud solutions."
+                    data-client="TechCorp Inc." data-year="2024"
+                    data-image="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800">
+                    <div class="project-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800"
+                            alt="Corporate Site" class="project-image">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Web / Branding</span>
+                        <h3 class="project-title">TechCorp Rebrand</h3>
+                        <p class="project-description">Complete digital identity overhaul focusing on accessibility and
+                            speed.</p>
+                        <div class="project-stats">
+                            <div class="p-stat">
+                                <h4>3x</h4>
+                                <span>Traffic</span>
+                            </div>
+                            <div class="p-stat">
+                                <h4>100/100</h4>
+                                <span>Lighthouse</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 (Cloud) -->
+                <div class="project-card" data-category="enterprise" data-title="Cloud Migration"
+                    data-desc="A massive migration project moving on-premise infrastructure to a hybrid cloud environment. We verified data integrity for petabytes of data and established a robust CI/CD pipeline."
+                    data-client="SkyHigh Networks" data-year="2023"
+                    data-image="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800">
+                    <div class="project-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800"
+                            alt="Cloud Migration" class="project-image">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Cloud / DevOps</span>
+                        <h3 class="project-title">Cloud Migration</h3>
+                        <p class="project-description">Zero-downtime migration to AWS with automated CI/CD pipelines.
+                        </p>
+                        <div class="project-stats">
+                            <div class="p-stat">
+                                <h4>99.99%</h4>
+                                <span>Uptime</span>
+                            </div>
+                            <div class="p-stat">
+                                <h4>$2M</h4>
+                                <span>Savings</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonials Slider -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2>Trusted by Industry Leaders</h2>
+            <div class="testimonials-slider">
+                <!-- Card 1 -->
+                <div class="testimonial-card">
+                    <div class="t-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="t-text">"Hiprowes didn't just build an app; they completely transformed our digital
+                        customer experience. The ROI was immediate and significant."</p>
+                    <div class="t-author">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=150"
+                            alt="CEO" class="t-avatar">
+                        <div class="t-info">
+                            <h5>David Chen</h5>
+                            <span>CTO, NovaFin</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="testimonial-card">
+                    <div class="t-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="t-text">"Their expertise in AI and healthcare compliance is unmatched. The MediBot
+                        assistant has reduced our triage wait times by 40%."</p>
+                    <div class="t-author">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=150"
+                            alt="Director" class="t-avatar">
+                        <div class="t-info">
+                            <h5>Sarah Johnson</h5>
+                            <span>Director, HealthFirst</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="testimonial-card">
+                    <div class="t-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="t-text">"Scaling our logistics platform with Hiprowes was seamless. They understood our
+                        legacy challenges and modernized us without downtime."</p>
+                    <div class="t-author">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=150"
+                            alt="VP" class="t-avatar">
+                        <div class="t-info">
+                            <h5>Michael Ross</h5>
+                            <span>VP Ops, LogiTrans</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="testimonial-card">
+                    <div class="t-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="t-text">"The rebrand was a massive success. Traffic tripled in the first month, and the
+                        design system they built scales perfectly."</p>
+                    <div class="t-author">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=150"
+                            alt="CMO" class="t-avatar">
+                        <div class="t-info">
+                            <h5>Elena Rodriguez</h5>
+                            <span>CMO, TechCorp</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parallax CTA Section -->
+    <section class="parallax-cta">
+        <div class="container cta-content">
+            <h2>Ready to Build the Future?</h2>
+            <p>Join the industry leaders who are transforming their businesses with our cutting-edge solutions.</p>
+            <a href="contact.html" class="btn btn-primary btn-lg btn-glow">Start Your Project</a>
+        </div>
+    </section>
+
+    <!-- Client Marquee -->
+    <section class="logo-marquee-section">
+        <div class="container" style="overflow: hidden;">
+            <div class="marquee-track">
+                <!-- Duplicate logos for seamless loop -->
+                <span class="client-logo">GOOGLE</span>
+                <span class="client-logo">MICROSOFT</span>
+                <span class="client-logo">AMAZON</span>
+                <span class="client-logo">SPOTIFY</span>
+                <span class="client-logo">AIRBNB</span>
+                <span class="client-logo">UBER</span>
+                <span class="client-logo">NETFLIX</span>
+                <span class="client-logo">GOOGLE</span>
+                <span class="client-logo">MICROSOFT</span>
+                <span class="client-logo">AMAZON</span>
+                <span class="client-logo">SPOTIFY</span>
+                <span class="client-logo">AIRBNB</span>
+                <span class="client-logo">UBER</span>
+                <span class="client-logo">NETFLIX</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details Modal -->
+    <div class="project-modal-overlay" id="project-modal">
+        <div class="project-modal-content">
+            <button class="modal-close-btn" aria-label="Close Modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body">
+                <div class="modal-image-col">
+                    <img src="" alt="Project Preview" id="modal-img">
+                </div>
+                <div class="modal-info-col">
+                    <span class="modal-tag" id="modal-tag">Category</span>
+                    <h2 class="modal-title" id="modal-title">Project Title</h2>
+                    <p class="modal-desc" id="modal-desc">Description goes here...</p>
+                    <div class="modal-meta-grid">
+                        <div class="meta-item">
+                            <h5>Client</h5>
+                            <p id="modal-client">Client Name</p>
+                        </div>
+                        <div class="meta-item">
+                            <h5>Year</h5>
+                            <p id="modal-year">2024</p>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary w-100">Start a Project Like This</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Filter Logic
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filter = btn.getAttribute('data-filter');
+
+                    projectCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'scale(1)';
+                            }, 50);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'scale(0.9)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+
+            // Modal Logic
+            const modal = document.getElementById('project-modal');
+            const modalImg = document.getElementById('modal-img');
+            const modalTag = document.getElementById('modal-tag');
+            const modalTitle = document.getElementById('modal-title');
+            const modalDesc = document.getElementById('modal-desc');
+            const modalClient = document.getElementById('modal-client');
+            const modalYear = document.getElementById('modal-year');
+            const closeModal = document.querySelector('.modal-close-btn');
+
+            document.querySelectorAll('.project-card').forEach(card => {
+                card.addEventListener('click', () => {
+                    const data = card.dataset;
+                    modalImg.src = data.image;
+                    modalTag.textContent = data.category;
+                    modalTitle.textContent = data.title;
+                    modalDesc.textContent = data.desc;
+                    modalClient.textContent = data.client;
+                    modalYear.textContent = data.year;
+
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+
+                // Add 3D Tilt Effect
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+
+                    const rotateX = ((y - centerY) / centerY) * -5; // Max 5deg rotation
+                    const rotateY = ((x - centerX) / centerX) * 5;
+
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+                });
+            });
+
+            closeModal.addEventListener('click', () => {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+    </script>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Hiprowes<span>.</span></h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1rem;">Empowering businesses with cutting-edge
+                        technology and enterprise solutions.</p>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="#" style="color: white; font-size: 1.2rem;"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" style="color: white; font-size: 1.2rem;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: white; font-size: 1.2rem;"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Core IT</h3>
+                    <ul>
+                        <li><a href="service-software.html">Software Dev</a></li>
+                        <li><a href="service-web.html">Web Development</a></li>
+                        <li><a href="service-mobile.html">Mobile Apps</a></li>
+                        <li><a href="service-cloud.html">Cloud & DevOps</a></li>
+                        <li><a href="service-ui-ux.html">UI/UX Design</a></li>
+                        <li><a href="service-consulting.html">IT Consulting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Enterprise</h3>
+                    <ul>
+                        <li><a href="service-oracle.html">Oracle ERP</a></li>
+                        <li><a href="service-epm.html">EPM Services</a></li>
+                        <li><a href="service-sap.html">SAP Solutions</a></li>
+                        <li><a href="service-salesforce.html">Salesforce</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><a href="mailto:info@hiprowes.com">info@hiprowes.com</a></li>
+                        <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                        <li>123 Tech Park, Innovation City</li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                style="text-align: center; color: var(--text-primary-light); border-top: 1px solid rgba(255,255,255,0.05); padding-top: 2rem;">
+                <p style="color: var(--text-muted); font-size: 0.9rem;">&copy; 2025 Hiprowes. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
