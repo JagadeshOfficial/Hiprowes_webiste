@@ -290,36 +290,77 @@
         </div>
     </section>
 
-    <!-- Process / Journey Section -->
-    <section class="process-section bg-light">
+    <!-- Premium Process Section -->
+    <section class="premium-process-section">
         <div class="container">
             <div class="text-center mb-5">
-                <span class="section-subtitle">How We Work</span>
-                <h2 class="section-title">The Path to Digital Excellence</h2>
+                <span class="section-subtitle" style="color: var(--accent);">Our Methodology</span>
+                <h2 class="section-title text-white">The Protocol of Perfection</h2>
+                <p class="section-desc" style="max-width: 600px; margin: 0 auto; color: var(--text-muted);">
+                    From the first spark of an idea to the global scale, we follow a rigorous, agile-driven process.
+                </p>
             </div>
-            <div class="process-timeline">
-                <div class="process-step">
-                    <div class="step-icon"><i class="fas fa-search"></i></div>
-                    <h4>Discovery</h4>
-                    <p>We analyze your business goals and technical requirements.</p>
+
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+
+                <!-- Step 1 -->
+                <div class="timeline-item left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-effect">
+                        <div class="step-number">01</div>
+                        <h3>Discovery & Analysis</h3>
+                        <p>We deep dive into your ecosystem, understanding bottlenecks, user needs, and business goals.
+                        </p>
+                        <ul class="step-metrics">
+                            <li><i class="fas fa-check"></i> Stakeholder Interviews</li>
+                            <li><i class="fas fa-check"></i> Market Research</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="step-connector"></div>
-                <div class="process-step">
-                    <div class="step-icon"><i class="fas fa-pencil-ruler"></i></div>
-                    <h4>Strategy</h4>
-                    <p>Designing a roadmap tailored to your specific needs.</p>
+
+                <!-- Step 2 -->
+                <div class="timeline-item right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-effect">
+                        <div class="step-number">02</div>
+                        <h3>Strategic Blueprint</h3>
+                        <p>We architect the solution. No code is written until the path is clear, scalable, and secure.
+                        </p>
+                        <ul class="step-metrics">
+                            <li><i class="fas fa-check"></i> Architecture Design</li>
+                            <li><i class="fas fa-check"></i> Tech Stack Selection</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="step-connector"></div>
-                <div class="process-step">
-                    <div class="step-icon"><i class="fas fa-code"></i></div>
-                    <h4>Development</h4>
-                    <p>Agile engineering with top-tier technologies and best practices.</p>
+
+                <!-- Step 3 -->
+                <div class="timeline-item left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-effect">
+                        <div class="step-number">03</div>
+                        <h3>Agile Development</h3>
+                        <p>We build in sprints. You see progress every two weeks, ensuring the product evolves with your
+                            vision.</p>
+                        <ul class="step-metrics">
+                            <li><i class="fas fa-check"></i> CI/CD Pipelines</li>
+                            <li><i class="fas fa-check"></i> Bi-weekly Demos</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="step-connector"></div>
-                <div class="process-step">
-                    <div class="step-icon"><i class="fas fa-rocket"></i></div>
-                    <h4>Launch</h4>
-                    <p>Seamless deployment and post-launch support & scaling.</p>
+
+                <!-- Step 4 -->
+                <div class="timeline-item right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-effect">
+                        <div class="step-number">04</div>
+                        <h3>Launch & Scale</h3>
+                        <p>We deploy with zero downtime strategies and monitor performance 24/7 as you grow.</p>
+                        <ul class="step-metrics">
+                            <li><i class="fas fa-check"></i> Cloud Deployment</li>
+                            <li><i class="fas fa-check"></i> Performance Tuning</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -442,6 +483,31 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+    <script>
+        // Timeline Scroll Animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            const timelineLine = document.querySelector('.timeline-line::after'); // This is a pseudo-element, easier to animate the container or use JS to set height style on line
+
+            // We need to animate the 'active' class on items
+            const observerOptions = {
+                threshold: 0.5,
+                rootMargin: "0px"
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, observerOptions);
+
+            timelineItems.forEach(item => {
+                observer.observe(item);
+            });
+        });
+    </script>
 </body>
 
 </html>
