@@ -4253,14 +4253,7 @@ footer {
         /* Increase overlap safety */
     }
 
-    /* Fix Mobile Menu Visibility */
-    .nav-container {
-        padding-top: 110px !important;
-        background: rgba(2, 6, 23, 0.98);
-        /* Solid dark background */
-        backdrop-filter: blur(20px);
-        z-index: 9999;
-    }
+
 
     /* Portfolio Filters - Horizontal Scroll */
     .portfolio-filters {
@@ -4412,15 +4405,19 @@ footer {
         transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         display: flex !important;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start !important;
+        /* Start from top to allow scrolling */
         align-items: center;
-        padding: 4rem 2rem 2rem !important;
-        /* Top padding for breathing room */
+        padding: 6rem 2rem 4rem !important;
+        /* Top padding for header clearance */
         margin: 0 !important;
         z-index: 9990;
         /* High but below toggle */
         opacity: 0;
         visibility: hidden;
+        overflow-y: auto !important;
+        /* Enable scrolling */
+        -webkit-overflow-scrolling: touch;
     }
 
     .nav-menu.active {
