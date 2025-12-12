@@ -92,6 +92,8 @@ img {
     cursor: pointer;
     transition: var(--trans-med);
     border: none;
+    white-space: nowrap;
+    /* Prevent button text wrap */
 }
 
 .btn-primary {
@@ -189,12 +191,14 @@ img {
 .nav-container {
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: 1.5rem;
+    /* Reduced from 3rem */
 }
 
 .nav-menu {
     display: flex;
-    gap: 2.5rem;
+    gap: 1.5rem;
+    /* Reduced from 2.5rem */
     align-items: center;
 }
 
@@ -209,6 +213,8 @@ img {
     display: flex;
     align-items: center;
     gap: 6px;
+    white-space: nowrap;
+    /* Prevent text wrapping */
 }
 
 .nav-link::after {
@@ -4493,87 +4499,85 @@ footer {
         transition-delay: 0.6s;
     }
 
-    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    /* Subtle depth */
-}
 
-/* Hover Effect */
-.nav-links li a:hover,
-.nav-links li a.active {
-    color: var(--accent) !important;
-    transform: scale(1.05);
-    text-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
-}
 
-/* --- MOBILE ACCORDION STYLES --- */
-/* Reset Dropdowns for Accordion */
-.mega-dropdown .dropdown-menu {
-    position: relative !important;
-    /* Stack vertically */
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    background: rgba(255, 255, 255, 0.03) !important;
-    border: none !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out, opacity 0.5s ease;
-    opacity: 0;
-    visibility: hidden;
-    display: block !important;
-    /* Always block, toggle via height */
-}
+    /* Hover Effect */
+    .nav-links li a:hover,
+    .nav-links li a.active {
+        color: var(--accent) !important;
+        transform: scale(1.05);
+        text-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+    }
 
-/* Active State (Open Accordion) */
-.nav-item.dropdown.active .dropdown-menu {
-    max-height: 1000px;
-    /* Arbitrary large height */
-    opacity: 1;
-    visibility: visible;
-    padding: 1rem !important;
-    margin-top: 1rem !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-}
+    /* --- MOBILE ACCORDION STYLES --- */
+    /* Reset Dropdowns for Accordion */
+    .mega-dropdown .dropdown-menu {
+        position: relative !important;
+        /* Stack vertically */
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        background: rgba(255, 255, 255, 0.03) !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out, opacity 0.5s ease;
+        opacity: 0;
+        visibility: hidden;
+        display: block !important;
+        /* Always block, toggle via height */
+    }
 
-/* Rotate Icon */
-.nav-item.dropdown.active .toggle-icon {
-    transform: rotate(180deg);
-    color: var(--accent);
-}
+    /* Active State (Open Accordion) */
+    .nav-item.dropdown.active .dropdown-menu {
+        max-height: 1000px;
+        /* Arbitrary large height */
+        opacity: 1;
+        visibility: visible;
+        padding: 1rem !important;
+        margin-top: 1rem !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
 
-/* Sub-items Styling */
-.mega-column {
-    margin-bottom: 1.5rem;
-}
+    /* Rotate Icon */
+    .nav-item.dropdown.active .toggle-icon {
+        transform: rotate(180deg);
+        color: var(--accent);
+    }
 
-.mega-title {
-    font-size: 0.9rem;
-    color: var(--accent);
-    margin-bottom: 0.5rem;
-    padding-left: 0.5rem;
-    border-left: 2px solid var(--accent);
-}
+    /* Sub-items Styling */
+    .mega-column {
+        margin-bottom: 1.5rem;
+    }
 
-.dropdown-item {
-    padding: 0.5rem 1rem !important;
-    font-size: 1rem !important;
-    color: #94a3b8 !important;
-    -webkit-text-stroke: 0 !important;
-    /* Ensure readable */
-    text-shadow: none !important;
-}
+    .mega-title {
+        font-size: 0.9rem;
+        color: var(--accent);
+        margin-bottom: 0.5rem;
+        padding-left: 0.5rem;
+        border-left: 2px solid var(--accent);
+    }
 
-/* Bottom Decoration */
-.nav-menu::after {
-    content: "Hiprowes.";
-    position: absolute;
-    bottom: 2rem;
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.2);
-    letter-spacing: 5px;
-    text-transform: uppercase;
-}
+    .dropdown-item {
+        padding: 0.5rem 1rem !important;
+        font-size: 1rem !important;
+        color: #94a3b8 !important;
+        -webkit-text-stroke: 0 !important;
+        /* Ensure readable */
+        text-shadow: none !important;
+    }
+
+    /* Bottom Decoration */
+    .nav-menu::after {
+        content: "Hiprowes.";
+        position: absolute;
+        bottom: 2rem;
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.2);
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
 }
