@@ -34,19 +34,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Mobile Dropdown Handling
-    if (window.innerWidth < 1024) { // Increased breakpoint to match CSS
+    // Mobile Accordion Logic
+    if (window.innerWidth < 1024) {
         const dropdownToggles = document.querySelectorAll('.nav-item.dropdown > .nav-link');
 
         dropdownToggles.forEach(toggle => {
             toggle.addEventListener('click', (e) => {
-                e.preventDefault(); // Prevent navigation
+                e.preventDefault(); // Stop link navigation
+                e.stopPropagation(); // Stop bubbling
+
                 const parent = toggle.parentElement;
+                const wasActive = parent.classList.contains('active');
 
-                // Close other open menus? Optional. For now let's just toggle current.
-                parent.classList.toggle('active');
+                // Close all other dropdowns first (Accordion behavior)
+                document.querySelectorAll('.nav-item.dropdown').forEach(item => {
+                    item.classList.remove('active');
+                });
 
-                // Toggle rotate on icon specifically if needed, CSS handles it via .nav-item:hover but for click we need .active
+                // Toggle the clicked one
+                if (!wasActive) {
+                    parent.classList.add('active');
+                }
             });
         });
     }
