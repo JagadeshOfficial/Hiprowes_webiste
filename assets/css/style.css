@@ -4495,6 +4495,7 @@ footer {
         /* Subtle depth */
     }
 
+    /* Hover Effect */
     .nav-links li a:hover,
     .nav-links li a.active {
         color: var(--accent) !important;
@@ -4502,71 +4503,51 @@ footer {
         text-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
     }
 
-    font-size: 2.5rem;
-    /* Huge font */
-    font-weight: 800;
-    color: transparent;
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    display: block;
-    padding: 0.5rem;
-    transition: all 0.3s ease;
-}
+    /* Dropdown Styling in Mobile */
+    .mega-dropdown .dropdown-menu {
+        position: static !important;
+        background: rgba(255, 255, 255, 0.03) !important;
+        box-shadow: none !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border-radius: 12px;
+        display: none;
+        padding: 1rem;
+        margin-top: 1rem;
+        text-align: left;
+    }
 
-.nav-links li a:hover,
-.nav-links li a.active {
-    color: #fff;
-    -webkit-text-stroke: 0px;
-    text-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
-    transform: scale(1.05);
-}
+    .mega-dropdown.active .dropdown-menu {
+        display: block;
+        animation: fadeIn 0.4s ease;
+    }
 
-/* Dropdown Styling in Mobile */
-.mega-dropdown .dropdown-menu {
-    position: static !important;
-    background: rgba(255, 255, 255, 0.03) !important;
-    box-shadow: none !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    border-radius: 12px;
-    display: none;
-    padding: 1rem;
-    margin-top: 1rem;
-    text-align: left;
-}
+    .dropdown-col h4 {
+        font-size: 1rem;
+        color: var(--accent);
+        margin: 1rem 0 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
 
-.mega-dropdown.active .dropdown-menu {
-    display: block;
-    animation: fadeIn 0.4s ease;
-}
+    .dropdown-col ul li a {
+        font-size: 1rem !important;
+        /* Smaller for sub-items */
+        -webkit-text-stroke: 0px !important;
+        color: #94a3b8 !important;
+        font-weight: 400;
+        text-transform: none;
+        letter-spacing: normal;
+        padding: 0.3rem 0;
+    }
 
-.dropdown-col h4 {
-    font-size: 1rem;
-    color: var(--accent);
-    margin: 1rem 0 0.5rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.dropdown-col ul li a {
-    font-size: 1rem !important;
-    /* Smaller for sub-items */
-    -webkit-text-stroke: 0px !important;
-    color: #94a3b8 !important;
-    font-weight: 400;
-    text-transform: none;
-    letter-spacing: normal;
-    padding: 0.3rem 0;
-}
-
-/* Bottom Decoration */
-.nav-menu::after {
-    content: "Hiprowes.";
-    position: absolute;
-    bottom: 2rem;
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.2);
-    letter-spacing: 5px;
-    text-transform: uppercase;
-}
+    /* Bottom Decoration */
+    .nav-menu::after {
+        content: "Hiprowes.";
+        position: absolute;
+        bottom: 2rem;
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.2);
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
 }
